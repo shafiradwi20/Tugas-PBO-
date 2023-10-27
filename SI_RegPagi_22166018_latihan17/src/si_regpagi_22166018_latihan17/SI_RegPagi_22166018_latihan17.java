@@ -8,34 +8,32 @@ package si_regpagi_22166018_latihan17;
 import java.util.Scanner;
 public class SI_RegPagi_22166018_latihan17 {
     public static void main(String[] args) {
-        
 
-        Scanner input = new Scanner(System.in);
+        // Gaji pokok Younglex
+        double gajiPokok = 6000000.0; // Gaji pokok Younglex sebesar Rp 6.000.000
 
-        // Memasukkan gaji pokok
-        System.out.print("Masukkan gaji pokok (Rp): ");
-        double gajiPokok = input.nextDouble();
+        // Status perkawinan Younglex (true jika sudah menikah, false jika belum)
+        boolean menikah = true;
 
-        // Memasukkan status pernikahan
-        System.out.print("Apakah Anda sudah menikah? (true/false): ");
-        boolean menikah = input.nextBoolean();
+        // Persentase tunjangan untuk yang sudah menikah
+        double persentaseTunjangan = 36.0; // 36% tunjangan
 
-        // Menghitung tunjangan berdasarkan aturan
-        double tunjangan = 0;
+        // Menghitung tunjangan berdasarkan status perkawinan
+        double tunjangan = 0.0;
         if (menikah) {
-            tunjangan = 0.35 * gajiPokok;
+            tunjangan = (persentaseTunjangan / 100) * gajiPokok;
         }
 
         // Menghitung total gaji
         double totalGaji = gajiPokok + tunjangan;
 
         // Menampilkan hasil
-        System.out.println("Gaji Pokok: Rp " + gajiPokok);
-        System.out.println("Tunjangan: Rp " + tunjangan);
-        System.out.println("Total Gaji: Rp " + totalGaji);
+        System.out.println("Gaji Pokok Younglex: Rp " + gajiPokok);
+        System.out.println("Tunjangan Younglex: Rp " + tunjangan);
+        System.out.println("Total Gaji Younglex: Rp " + totalGaji);
     }
 }
 
    
+   
     
-
